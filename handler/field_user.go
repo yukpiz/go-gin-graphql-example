@@ -1,4 +1,4 @@
-package field
+package handler
 
 import (
 	"github.com/graphql-go/graphql"
@@ -14,7 +14,7 @@ var User = graphql.NewObject(graphql.ObjectConfig{
 	},
 })
 
-func GetUserProfile() *graphql.Field {
+func (uh *UserHandler) GetUserProfile() *graphql.Field {
 	return &graphql.Field{
 		Type: User,
 		Resolve: func(p graphql.ResolveParams) (interface{}, error) {
