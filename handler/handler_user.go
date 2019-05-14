@@ -6,6 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/graphql-go/graphql"
 	"github.com/yukpiz/go-gin-graphql-example/handler/field"
+	"github.com/yukpiz/go-gin-graphql-example/handler/resource"
 )
 
 type UserHandler struct {
@@ -30,7 +31,7 @@ func (uh *UserHandler) AssignRoutes(e *gin.Engine) error {
 			})
 
 			// Restful APIs
-			v3ug.POST("/profile", uh.CreateUserProfile)
+			v3ug.POST("/profile", resource.CreateUserProfile)
 
 			// GraphQL Fields
 			gcfg := graphql.ObjectConfig{

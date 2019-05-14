@@ -1,4 +1,4 @@
-package handler
+package resource
 
 import (
 	"net/http"
@@ -6,7 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func (uh *UserHandler) CreateUserProfile(gc *gin.Context) {
+func CreateUserProfile(gc *gin.Context) {
 	u := struct {
 		ID        int    `json:"id"`
 		FirstName string `json:"first_name"`

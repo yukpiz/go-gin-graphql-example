@@ -1,6 +1,8 @@
 package field
 
-import "github.com/graphql-go/graphql"
+import (
+	"github.com/graphql-go/graphql"
+)
 
 var User = graphql.NewObject(graphql.ObjectConfig{
 	Name: "User",
